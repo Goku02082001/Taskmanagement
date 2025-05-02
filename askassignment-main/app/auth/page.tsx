@@ -24,17 +24,14 @@ export default function AuthPage() {
 
   const [showPassword, setShowPassword] = useState(false);
 
-  // Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Toggle Password Visibility
   const handleTogglePassword = () => {
     setShowPassword((prev) => !prev);
   };
 
-  // Handle form submit
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const endpoint = formData.isSignup
