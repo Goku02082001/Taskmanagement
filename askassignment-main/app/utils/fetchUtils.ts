@@ -14,6 +14,7 @@ export async function fetchWithAuth(
 
   try {
     const response = await fetch(url, defaultOptions);
+    console.log(response)
     if (!response.ok) {
       throw new Error(`Error: ${response.status} ${response.statusText}`);
     }

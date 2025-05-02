@@ -19,7 +19,7 @@ const dbconnection = async (): Promise<void> => {
     console.log("New database connection established");
   } catch (error) {
     console.error("Database connection error:", error);
-    throw new Error("Database connection failed");
+   
   }
 };
 
