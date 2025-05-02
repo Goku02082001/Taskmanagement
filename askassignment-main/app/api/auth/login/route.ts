@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
     response.cookies.set("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      maxAge: 7 * 24 * 60 * 60, // 7 days
+      maxAge: 7 * 24 * 60 * 60, 
       sameSite: "strict",
       path: "/",
     });
@@ -51,7 +51,6 @@ export async function POST(req: NextRequest) {
   }
 }
 
-// get the user details
 export async function GET(req: NextRequest) {
   if (req.method !== "GET") {
     return NextResponse.json({ message: "Method Not Allowed" });
@@ -84,5 +83,3 @@ export async function GET(req: NextRequest) {
     );
   }
 }
-
-// export default registerController;
